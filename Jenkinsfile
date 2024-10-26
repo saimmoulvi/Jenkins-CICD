@@ -12,12 +12,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Install pip') {
-            steps {
-                sh 'apt-get update && apt-get install -y python3-pip'
-            }
-        }
-        stage('Install Python venv') {
+         stage('Install Python venv') {
             steps {
                 sh 'apt-get install -y python3.12-venv'
             }
