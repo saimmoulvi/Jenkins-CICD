@@ -143,6 +143,39 @@ Stages:
 3. Install Python venv: Installs the `venv` module for creating virtual environments.
 
 ![Python venv Stage](https://github.com/user-attachments/assets/6bbc6e28-4935-46ee-bf3a-cb28c37b4e93)
-   
 
+4. Check Python and pip Installation: Verifies the installation of Python and `pip`.
+
+![Python and pip Installation Stage](https://github.com/user-attachments/assets/39282bd5-40c4-4a17-8d72-dd61378549fd)
+
+5. Set Up Python: Creates a virtual environment, activates it, and installs dependencies from `requirements.txt`.
+
+![Set Up Python Stage](https://github.com/user-attachments/assets/9508e261-02d6-46f5-9a2c-b3ad50ed8138)
+
+![Set Up Python Stage 1](https://github.com/user-attachments/assets/685fbeca-cc26-4fd5-b6cd-8378db807a5f)
+
+![Set Up Python Stage 2](https://github.com/user-attachments/assets/7a9c23c5-0142-4b2a-9f74-faaa8e206eb0)
+
+6. Run Tests: Runs the test suite using `pytest`.
+
+![Tests 1](https://github.com/user-attachments/assets/cd36bd1f-ee19-46a8-baea-4e9c9b25d2b8)
+
+![Tests 2](https://github.com/user-attachments/assets/e689038c-843c-4e72-9e3c-5840faba79d5)
+
+7. Move to Staging Environment: This stage is executed only if the previous stages are successful. It prints a message indicating the successful deployment to the staging environment.
+
+![Staging Environment](https://github.com/user-attachments/assets/cc6274f5-9abb-4e45-893f-f7ef9b1f7331)
+
+Post-Build Actions:
+- Clean Workspace: Cleans the workspace after the pipeline execution.
+- Success: Prints a success message.
+- Failure: Prints a failure message
+
+![Post Action](https://github.com/user-attachments/assets/3e341f8b-f413-4d5a-be31-ef01b98baeca)
+
+## Step 3: Configure the Pipeline to Trigger on Push: In the "Build Triggers" section of Jenkins, select "GitHub hook trigger for GITScm polling."    
+
+   pollSCM('* * * * *'): This triggers the pipeline every minute to check for changes in the source code repository.    
+   
+![Triggers](https://github.com/user-attachments/assets/33291406-104f-4cb9-b9e6-675b75751493)
 
