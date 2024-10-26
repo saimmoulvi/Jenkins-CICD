@@ -104,10 +104,31 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
    ```
 4. Restart your EC2 instance to apply the changes
 
+## Jenkins Pipeline Step-by-Step Guide:
+   
+### Step 1: Create a simple Python web application repository on Github with following repository structure
+
+```
+Your Repo Name/
+├── templates/
+│   └── index.html
+├── tests/
+│   └── test_app.py
+├── Jenkinsfile
+├── README.md
+├── app.py
+└── requirements.txt
+```
+### Step 2: Create a `Jenkinsfile` in the root of your project repository with the following stages:
+
+![Pipeline Stages](https://github.com/user-attachments/assets/fb63ba40-d5c5-4584-8534-3b8162161305)
+
+*Kindly refer `Jenkinsfile` for complete Groovy code*               
+
+Complete Breakdown of the Pipeline Stages:    
 
 
 
-       
 
 
 
