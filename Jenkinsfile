@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Install pip') {
             steps {
-                sh 'sudo apt-get update && sudo apt-get install -y python3-pip'
+                sh 'apt-get update && apt-get install -y python3-pip'
             }
         }
         stage('Install Python venv') {
             steps {
-                sh 'sudo apt-get install -y python3.12-venv'
+                sh 'apt-get install -y python3.12-venv'
             }
         }
         stage('Check Python and pip Installation') {
