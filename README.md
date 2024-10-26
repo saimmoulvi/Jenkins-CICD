@@ -127,8 +127,22 @@ Your Repo Name/
 
 Complete Breakdown of the Pipeline Stages:    
 
+Agent:
+- `agent any:` This specifies that the pipeline can run on any available agent in the Jenkins environment.
 
+Stages:   
 
+1. Checkout: Checks out the latest code from the SCM.
 
+![Checkout Stage](https://github.com/user-attachments/assets/1dd67d38-7596-4471-8df2-ceacd1e69d70)
+
+2. Install pip: Installs the `pip` package manager on the agent if it's not already present.
+
+![Install pip Stage](https://github.com/user-attachments/assets/bce28daf-2353-413b-81c7-3ab20f5c64f1)
+
+3. Install Python venv: Installs the `venv` module for creating virtual environments.
+
+![Python venv Stage](https://github.com/user-attachments/assets/6bbc6e28-4935-46ee-bf3a-cb28c37b4e93)
+   
 
 
