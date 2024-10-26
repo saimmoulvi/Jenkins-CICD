@@ -85,5 +85,29 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ![Jenkins Dashboard](https://github.com/user-attachments/assets/b7587aba-17a8-435b-b01c-1962af71878e)
 
+### Step 10: Guide to Editing /etc/sudoers on EC2
+1. Connect to the EC2 Instance:     
+   SSH into your instance:   
+   ```
+   ssh -i path/to/your-key.pem ec2-user@your-ec2-public-ip
+   ```
+2. Open /etc/sudoers Using visudo:
+   Run the following command to open the sudoers file in a safe editor:
+   ```
+   sudo su
+   sudo visudo
+   ```
+3. Edit the File as Needed:
+   Add the following command in the last section of the editor
+   ```
+   jenkins ALL=(ALL) NOPASSWD: /usr/bin/apt-get
+   ```
+4. Restart your EC2 instance to apply the changes
+
+
+
+
+       
+
 
 
