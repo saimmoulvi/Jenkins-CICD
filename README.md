@@ -166,16 +166,30 @@ Stages:
 
 ![Staging Environment](https://github.com/user-attachments/assets/cc6274f5-9abb-4e45-893f-f7ef9b1f7331)
 
-Post-Build Actions:
-- Clean Workspace: Cleans the workspace after the pipeline execution.
-- Success: Prints a success message.
-- Failure: Prints a failure message
-
-![Post Action](https://github.com/user-attachments/assets/3e341f8b-f413-4d5a-be31-ef01b98baeca)
-
 ## Step 3: Configure the Pipeline to Trigger on Push: In the "Build Triggers" section of Jenkins, select "GitHub hook trigger for GITScm polling."    
 
    pollSCM('* * * * *'): This triggers the pipeline every minute to check for changes in the source code repository.    
    
 ![Triggers](https://github.com/user-attachments/assets/33291406-104f-4cb9-b9e6-675b75751493)
+
+## Step 4: Email Notification: 
+
+1. Go to Manage Jenkins > Configure System.
+2. Scroll down to E-mail Notification.
+    - SMTP Server: Enter the SMTP server for your email provider (e.g., smtp.gmail.com for Gmail).
+    - Use SMTP Authentication: Check this if your SMTP server requires authentication.
+    - User Name: Enter the SMTP username (for Gmail, it’s your full email address).
+    - Password: Enter the SMTP password or an application-specific password if using a secure account like Gmail.
+    - SMTP Port: Typically, use 587 for TLS or 465 for SSL (depending on your email provider).
+    - Charset: UTF-8 is recommended.
+3. Test the Configuration: You can send a test email by entering a recipient email address under Test configuration by sending a test email.      
+
+![Test Email 1](https://github.com/user-attachments/assets/0937616e-3d5b-44d3-8a00-31a0ff244e1d)
+
+![Test Email 2](https://github.com/user-attachments/assets/daa6d5d0-b857-4156-a27f-f32d635f9614)
+
+## Final Output: Post Action Stage 
+
+![Final Email](https://github.com/user-attachments/assets/2048b52c-9ebd-481f-9f92-78d17e3ad979)
+
 
